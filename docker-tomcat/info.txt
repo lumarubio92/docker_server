@@ -1,0 +1,19 @@
+# agregar usuario desde el archivo /usr/local/tomcat/conf/tomcat-users.xml
+
+  <user username="admin" password="admin" roles="manager-gui"/>                
+  
+#para poder ver el servidor desde otra pc /usr/local/tomcat/webapps/manager/META-INF/context.xml  comenta la siguiente linea
+
+<!--                                                    
+ <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />    
+--> 
+
+
+#para observar los cambios reinicia el servicio docker-tomcat
+docker stop id
+docker start id
+
+
+ingresa a tu direccion ip y listo 
+

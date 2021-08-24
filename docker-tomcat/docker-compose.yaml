@@ -1,0 +1,15 @@
+
+version: '3.7'
+services:
+  tomcat:
+    image: tomcat:8.5-jre8-alpine
+    container_name: tomcat
+    ports:
+      - "80:8080"
+    volumes:
+    #  - ./logs/:/usr/local/tomcat/logs/
+      - ./webapps/myapp.war:/usr/local/tomcat/webapps/myapp.war:ro
+     # - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:ro
+ #   environment:
+ #     - TOMCAT_USERNAME=javier
+ #     - TOMCAT_PASSWORD=root
